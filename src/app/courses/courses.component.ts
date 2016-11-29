@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+// import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CourseService } from './course.service';
 import {AutoGrowDirective} from '../auto-grow.directive';
 
@@ -10,7 +11,7 @@ import {AutoGrowDirective} from '../auto-grow.directive';
   directives: [AutoGrowDirective]
 })
 
-export class CoursesComponent implements OnInit {
+export class CoursesComponent {
   title: string = "The title of courses page";
   courses;
 
