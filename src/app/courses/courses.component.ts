@@ -1,16 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { CourseService } from './course.service';
+import {AutoGrowDirective} from '../auto-grow.directive';
 
 @Component({
   selector: 'courses',
   templateUrl: './courses.component.html',
-  styleUrls: ['./courses.component.css']
+  styleUrls: ['./courses.component.css'],
+  providers: [CourseService],
+  directives: [AutoGrowDirective]
 })
 
 export class CoursesComponent implements OnInit {
   title: string = "The title of courses page";
-  courses: Array<string> = [
-    "Course 1",
-    "Course 2",
-    "Course 3"
-  ];
+  courses;
+
+  constructor(courseService: CourseService) {
+    this.courses = courseService.getCourses();
+  }
+
 }

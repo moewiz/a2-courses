@@ -9,7 +9,9 @@ import { CoursesComponent } from './courses/courses.component';
 @NgModule({
   declarations: [
     AppComponent,
-    CoursesComponent
+    CoursesComponent,
+    AuthorsComponent,
+    AutoGrowDirective
   ],
   imports: [
     BrowserModule,

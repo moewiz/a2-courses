@@ -1,2 +1,8 @@
 <h2>Courses</h2>
 <p>{{ title }}</p>
+<input type="text" autoGrow style="color: #fff; transition: all 300ms ease; outline: none;"/>
+<ul>
+  <li *ngFor="let course of courses">
+    {{ course }}
+  </li>
+</ul>
